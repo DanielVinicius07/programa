@@ -1,0 +1,335 @@
+.module-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+}
+
+.module-container {
+  flex: 1;
+  background-color: var(--color-background);
+}
+
+.module-header {
+  background-color: var(--color-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.btn-back {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.btn-back:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.header-content h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-icon {
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  transition: background-color 0.2s ease;
+}
+
+.btn-icon:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.module-progress {
+  margin-bottom: 2rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.progress-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-green);
+}
+
+.progress-header span {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.progress-bar {
+  height: 0.5rem;
+  background-color: var(--color-border);
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--color-green);
+  border-radius: 0.25rem;
+  transition: width 0.3s ease;
+}
+
+.progress {
+  height: 0.5rem;
+  border-radius: 1rem;
+}
+
+.progress-primary::-webkit-progress-value {
+  background-color: var(--primary-color);
+}
+
+.progress-secondary::-webkit-progress-value {
+  background-color: var(--secondary-color);
+}
+
+.progress-accent::-webkit-progress-value {
+  background-color: var(--accent-color);
+}
+
+.progress::-webkit-progress-bar {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.dark .progress::-webkit-progress-bar {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Phase Track - Horizontal */
+.phase-track-horizontal {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.phase-track-horizontal::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  right: 2rem;
+  height: 2px;
+  background-color: var(--color-border);
+  z-index: 0;
+}
+
+.phase-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  z-index: 1;
+}
+
+.phase-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-border);
+  color: var(--color-text-light);
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.phase-button.completed {
+  background-color: var(--color-green);
+  border-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.phase-button.locked {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.phase-button:not(.locked):hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.phase-info {
+  text-align: center;
+  max-width: 100px;
+}
+
+.phase-number {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-green);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.phase-title {
+  font-size: 0.75rem;
+  margin: 0 0 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.phase-type {
+  font-size: 0.625rem;
+  color: var(--color-text-light);
+  display: block;
+}
+
+/* Phase Track - Vertical */
+.phase-track-vertical {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.phase-track-vertical::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1rem;
+  width: 2px;
+  background-color: var(--color-border);
+  z-index: 0;
+}
+
+.phase-node-vertical {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  z-index: 1;
+}
+
+.phase-button-vertical {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-border);
+  color: var(--color-text-light);
+  margin-right: 1rem;
+  position: absolute;
+  left: -1rem;
+  transition: all 0.2s ease;
+}
+
+.phase-button-vertical.completed {
+  background-color: var(--color-green);
+  border-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.phase-button-vertical.locked {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.phase-info-vertical {
+  padding-left: 1.5rem;
+}
+
+/* Module Description Card */
+.module-description-card {
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.module-description-card h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--color-blue);
+}
+
+.module-description-card p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.module-description-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+  color: var(--color-blue);
+}
+
+.module-description-card ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.module-description-card li {
+  margin-bottom: 0.5rem;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .phase-track-horizontal {
+    display: none;
+  }
+
+  .header-content h1 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .phase-track-vertical {
+    display: none;
+  }
+}

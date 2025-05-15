@@ -1,0 +1,83 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0, 156, 59, 0.1) 0%, rgba(0, 39, 118, 0.1) 100%);
+  padding: 2rem 1rem;
+}
+
+.login-page .container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-page .card {
+  background-color: var(--background-color);
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.login-page .card-header {
+  padding: 2rem 2rem 1rem;
+  text-align: center;
+}
+
+.login-page .logo {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.login-page .title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.login-page .subtitle {
+  color: var(--text-color);
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+
+.login-page .card-body {
+  padding: 1rem 2rem 2rem;
+}
+
+.login-page .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.login-page label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.login-page .card-footer {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+}
+
+.dark .login-page .card-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.login-page .alert {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.login-page .alert-error {
+  background-color: rgba(248, 114, 114, 0.2);
+  color: #ef4444;
+}
